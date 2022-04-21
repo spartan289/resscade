@@ -22,6 +22,7 @@ from django.views.generic import TemplateView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', TemplateView.as_view(template_name='index.html')),
-    path('logout',LogoutView.as_view()),
+    path('logout', LogoutView.as_view()),
     path('accounts/', include('allauth.urls')),
+    path('', include('account.urls')),
 ]
