@@ -9,7 +9,7 @@
 	<meta name="description" content="">
 	<meta name="author" content="">
 	<link rel="icon" href=" {% static 'assets/img/favicon.ico' %} ">
-	<title>Mediumish - A Medium style template by WowThemes.net</title>
+	<title>Typehub</title>
 	<!-- Bootstrap core CSS -->
 	<link href=" {% static 'assets/css/bootstrap.min.css' %} " rel="stylesheet">
 	<!-- Fonts -->
@@ -127,16 +127,17 @@
 					<!-- Begin Top Meta -->
 					<div class="row post-top-meta">
 						<div class="col-md-2">
-							<a href=" {% static 'author.html' %} "><img class="author-thumb"
-									src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
-									alt="Sal"></a>
+							<a href=" {% static 'author.html' %} ">
+								<img src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
+
 						</div>
 						<div class="col-md-10">
-							<a class="link-dark" href=" {% static 'author.html' %} ">Sal</a><a href="#"
+							<a class="link-dark" href=" {% static 'author.html' %} ">{{user.username}}</a><a href="#"
 								class="btn follow">Follow</a>
-							<span class="author-description">Founder of WowThemes.net and creator of <b>"Mediumish"</b>
-								theme that you're currently previewing. Developing professional premium themes,
-								templates, plugins, scripts since 2012.</span>
+							<span class="author-description">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus a ligula quam.
+								Aliquam erat volutpat.
+							</span>
 							<span class="post-date">22 July 2017</span><span class="dot"></span><span
 								class="post-read">6 min read</span>
 						</div>
@@ -333,16 +334,7 @@
 	<!-- End Twitter Timeline
 ================================================== -->
 
-	<!-- Begin AlertBar
-================================================== -->
-	<div class="alertbar">
-		<div class="container text-center">
-			<img src=" {% static 'assets/img/logo.png' %} " alt=""> &nbsp; Never miss a <b>story</b> from us, get weekly
-			updates in your inbox. <a href="#" class="btn subscribe">Get Updates</a>
-		</div>
-	</div>
-	<!-- End AlertBar
-================================================== -->
+
 
 	<!-- Begin Footer
 ================================================== -->

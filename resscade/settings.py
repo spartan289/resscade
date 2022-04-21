@@ -26,7 +26,7 @@ SECRET_KEY = '56dq2d2a=jy!bb+b6_*61*jbxdzblk0n9ur02b=e9^jg+#^k%#'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['7ca6-103-131-27-146.ngrok.io']
+ALLOWED_HOSTS = []
 AUTHENTICATION_BACKENDS = [
     'django.contrib.auth.backends.ModelBackend',
     'allauth.account.auth_backends.AuthenticationBackend',

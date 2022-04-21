@@ -11,6 +11,9 @@ def profile(request, username=None):
 
     if(User.objects.get(username=username)):
         user = User.objects.get(username=username)
+        user.socialaccount_set.filter(provider='google')[
+            0].extra_data['picture']
+
         return render(request, 'profile.html', {'user': user})
     else:
         return render(request, 'profile.html')

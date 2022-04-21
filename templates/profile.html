@@ -1,4 +1,6 @@
 {% load static %}
+{% load socialaccount %}
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -78,10 +80,11 @@
                             <h1>{{user.username}}</h1>
 
                             <span class="author-description">Founder of <a target="_blank"
-                                    href="https://www.wowthemes.net">WowThemes.net</a> and creator of
-                                <strong>"Mediumish"</strong> theme that you're currently previewing. I professionally
-                                develop premium themes, templates & scripts since the Apocalypse (2012). You can reach
-                                me out on the social links below.</span>
+                                    href="https://www.wowthemes.net">
+                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Illo itaque nam
+                                    voluptatibus error fugit iusto veniam voluptates alias maxime ab provident earum,
+                                    adipisci natus non ullam odit pariatur velit aliquam?
+                            </span>
                             <div class="sociallinks"><a target="_blank" href="https://www.facebook.com/wowthemesnet/"><i
                                         class="fa fa-facebook"></i></a> <span class="dot"></span> <a target="_blank"
                                     href="https://plus.google.com/s/wowthemesnet/top"><i
@@ -89,9 +92,7 @@
                             <a target="_blank" href="https://twitter.com/wowthemesnet" class="btn follow">Follow</a>
                         </div>
                         <div class="col-md-2 col-xs-12">
-                            <img class="author-thumb"
-                                src="https://www.gravatar.com/avatar/e56154546cf4be74e393c62d1ae9f9d4?s=250&amp;d=mm&amp;r=x"
-                                alt="Sal">
+                            <img src="{{ user.socialaccount_set.all.0.get_avatar_url }}" />
                         </div>
                     </div>
                 </div>
